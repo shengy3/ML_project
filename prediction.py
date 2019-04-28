@@ -7,6 +7,7 @@ Created on Mon Jun 11 11:59:03 2018
 """
 
 草尼瑪
+lul
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
