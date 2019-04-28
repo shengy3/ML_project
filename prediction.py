@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+#add a test coding comment
 """
 Created on Mon Jun 11 11:59:03 2018
 
@@ -118,7 +119,7 @@ upset_rate = sum(x<0 for x in matches['rk_diff'])/len(matches)
 print('Upset rate = ',upset_rate)
 
 '''
-Upsets at different rankings, how often does it happens in the 
+Upsets at different rankings, how often does it happens in the
 Top1-20, 20-40, 40-60, 60-80,80-100, 100-Unrank
 '''
 ups_t20_counter_1 = 0
@@ -148,57 +149,57 @@ for x in range(0,len(matches)):
             ups_t20_counter_1 = ups_t20_counter_1+1
             if matches['loser_rank'][x]<matches['winner_rank'][x]:
                 ups_t20_counter_2 = ups_t20_counter_2+1
-                
-for x in range(0,len(matches)):                
+
+for x in range(0,len(matches)):
         if (matches['loser_rank'][x] >= 21) & (matches['loser_rank'][x]<=40) &  (matches['winner_rank'][x]>=21) & (matches['winner_rank'][x]<=40):
             ups_t40_counter_1 = ups_t40_counter_1+1
             if matches['loser_rank'][x]<matches['winner_rank'][x]:
-                ups_t40_counter_2 = ups_t40_counter_2+1        
-        
-for x in range(0,len(matches)):        
+                ups_t40_counter_2 = ups_t40_counter_2+1
+
+for x in range(0,len(matches)):
         if (matches['loser_rank'][x] >= 41) & (matches['loser_rank'][x]<=60) &  (matches['winner_rank'][x]>=41) & (matches['winner_rank'][x]<=60):
             ups_t60_counter_1 = ups_t60_counter_1+1
             if matches['loser_rank'][x]<matches['winner_rank'][x]:
-                ups_t60_counter_2 = ups_t60_counter_2+1     
-        
-for x in range(0,len(matches)):        
+                ups_t60_counter_2 = ups_t60_counter_2+1
+
+for x in range(0,len(matches)):
         if (matches['loser_rank'][x] >= 61) & (matches['loser_rank'][x]<=80) &  (matches['winner_rank'][x]>=61) & (matches['winner_rank'][x]<=80):
             ups_t80_counter_1 = ups_t80_counter_1+1
             if matches['loser_rank'][x]<matches['winner_rank'][x]:
-                ups_t80_counter_2 = ups_t80_counter_2+1             
-        
-for x in range(0,len(matches)):        
+                ups_t80_counter_2 = ups_t80_counter_2+1
+
+for x in range(0,len(matches)):
         if (matches['loser_rank'][x] >= 81) & (matches['loser_rank'][x]<=100) &  (matches['winner_rank'][x]>=81) & (matches['winner_rank'][x]<=100):
             ups_t100_counter_1 = ups_t100_counter_1+1
             if matches['loser_rank'][x]<matches['winner_rank'][x]:
-                ups_t100_counter_2 = ups_t100_counter_2+1                  
+                ups_t100_counter_2 = ups_t100_counter_2+1
 
-for x in range(0,len(matches)):        
+for x in range(0,len(matches)):
         if (matches['loser_rank'][x] >= 101) & (matches['loser_rank'][x]<=200) &  (matches['winner_rank'][x]>=101) & (matches['winner_rank'][x]<=200):
             ups_t200_counter_1 = ups_t200_counter_1+1
             if matches['loser_rank'][x]<matches['winner_rank'][x]:
-                ups_t200_counter_2 = ups_t200_counter_2+1   
-                
-for x in range(0,len(matches)):        
+                ups_t200_counter_2 = ups_t200_counter_2+1
+
+for x in range(0,len(matches)):
         if (matches['loser_rank'][x] >= 201) & (matches['loser_rank'][x]<=400) &  (matches['winner_rank'][x]>=201) & (matches['winner_rank'][x]<=400):
             ups_t400_counter_1 = ups_t400_counter_1+1
             if matches['loser_rank'][x]<matches['winner_rank'][x]:
-                ups_t400_counter_2 = ups_t400_counter_2+1   
+                ups_t400_counter_2 = ups_t400_counter_2+1
 
-for x in range(0,len(matches)):        
+for x in range(0,len(matches)):
         if (matches['loser_rank'][x] >= 401) & (matches['loser_rank'][x]<=800) &  (matches['winner_rank'][x]>=401) & (matches['winner_rank'][x]<=800):
             ups_t800_counter_1 = ups_t800_counter_1+1
             if matches['loser_rank'][x]<matches['winner_rank'][x]:
-                ups_t800_counter_2 = ups_t800_counter_2+1   
- 
-for x in range(0,len(matches)):        
+                ups_t800_counter_2 = ups_t800_counter_2+1
+
+for x in range(0,len(matches)):
         if (matches['loser_rank'][x] >= 801)  &  (matches['winner_rank'][x]>=801) :
             ups_tR_counter_1 = ups_tR_counter_1+1
             if matches['loser_rank'][x]<matches['winner_rank'][x]:
-                ups_tR_counter_2 = ups_tR_counter_2+1          
-                
-                
-t20_upset_rate = ups_t20_counter_2/ups_t20_counter_1  
+                ups_tR_counter_2 = ups_tR_counter_2+1
+
+
+t20_upset_rate = ups_t20_counter_2/ups_t20_counter_1
 t40_upset_rate = ups_t40_counter_2/ups_t40_counter_1
 t60_upset_rate = ups_t60_counter_2/ups_t60_counter_1
 t80_upset_rate = ups_t80_counter_2/ups_t80_counter_1
@@ -207,7 +208,7 @@ t200_upset_rate = ups_t200_counter_2/ups_t200_counter_1
 t400_upset_rate = ups_t400_counter_2/ups_t400_counter_1
 t800_upset_rate = ups_t800_counter_2/ups_t800_counter_1
 ab800_upset_rate = ups_tR_counter_2/ups_tR_counter_1
-   
+
 print('Top 20 upset rate = ',t20_upset_rate, 'in', ups_t20_counter_1, 'match')
 print('Top 40 upset rate = ',t40_upset_rate, 'in', ups_t40_counter_1, 'match')
 print('Top 60 upset rate = ',t60_upset_rate, 'in', ups_t60_counter_1, 'match')
@@ -244,43 +245,43 @@ for x in range(0,len(matches)):
             rk_5_dif_counter_1 = rk_5_dif_counter_1+1
             if matches['loser_rank'][x]<matches['winner_rank'][x]:
                 rk_5_dif_counter_2 = rk_5_dif_counter_2+1
-                
-for x in range(0,len(matches)):                
+
+for x in range(0,len(matches)):
         if abs(matches['loser_rank'][x] - matches['winner_rank'][x])<=10:
             rk_10_dif_counter_1 = rk_10_dif_counter_1+1
             if matches['loser_rank'][x]<matches['winner_rank'][x]:
                 rk_10_dif_counter_2 = rk_10_dif_counter_2+1
-                
+
 for x in range(0,len(matches)):
         if abs(matches['loser_rank'][x] - matches['winner_rank'][x])<=20:
             rk_20_dif_counter_1 = rk_20_dif_counter_1+1
             if matches['loser_rank'][x]<matches['winner_rank'][x]:
                 rk_20_dif_counter_2 = rk_20_dif_counter_2+1
-                
+
 for x in range(0,len(matches)):
         if abs(matches['loser_rank'][x] - matches['winner_rank'][x])<=50:
             rk_50_dif_counter_1 = rk_50_dif_counter_1+1
             if matches['loser_rank'][x]<matches['winner_rank'][x]:
                 rk_50_dif_counter_2 = rk_50_dif_counter_2+1
-                
-for x in range(0,len(matches)):                
+
+for x in range(0,len(matches)):
         if abs(matches['loser_rank'][x] - matches['winner_rank'][x])<=100:
             rk_100_dif_counter_1 = rk_100_dif_counter_1+1
             if matches['loser_rank'][x]<matches['winner_rank'][x]:
                 rk_100_dif_counter_2 = rk_100_dif_counter_2+1
-                
-for x in range(0,len(matches)):                
+
+for x in range(0,len(matches)):
         if abs(matches['loser_rank'][x] - matches['winner_rank'][x])<=200:
             rk_200_dif_counter_1 = rk_200_dif_counter_1+1
             if matches['loser_rank'][x]<matches['winner_rank'][x]:
                 rk_200_dif_counter_2 = rk_200_dif_counter_2+1
-                
-for x in range(0,len(matches)):                
+
+for x in range(0,len(matches)):
         if abs(matches['loser_rank'][x] - matches['winner_rank'][x])<=500:
             rk_500_dif_counter_1 = rk_500_dif_counter_1+1
             if matches['loser_rank'][x]<matches['winner_rank'][x]:
                 rk_500_dif_counter_2 = rk_500_dif_counter_2+1
-                
+
 for x in range(0,len(matches)):
         if abs(matches['loser_rank'][x] - matches['winner_rank'][x])>500:
             rk_500abv_dif_counter_1 = rk_500abv_dif_counter_1+1
